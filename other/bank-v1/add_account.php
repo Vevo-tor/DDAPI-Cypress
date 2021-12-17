@@ -21,9 +21,9 @@
             $message = "Name or Surname is too short";
             echo "<script type='text/javascript'>
             alert('$message');
-            window.location.replace('/DDAPI-v2/other/bank-v1/accounts.php');
+            window.location.replace('/DDAPI-cypress/other/bank-v1/accounts.php');
             </script>";
-            header('/DDAPI-v2/other/bank-v1/accounts.php');
+            header('/DDAPI-cypress/other/bank-v1/accounts.php');
             die();
         }
 
@@ -31,9 +31,9 @@
             $message = "Invalid SSN";
             echo "<script type='text/javascript'>
             alert('$message');
-            window.location.replace('/DDAPI-v2/other/bank-v1/accounts.php');
+            window.location.replace('/DDAPI-cypress/other/bank-v1/accounts.php');
             </script>";
-            header('/DDAPI-v2/other/bank-v1/accounts.php');
+            header('/DDAPI-cypress/other/bank-v1/accounts.php');
             die();
         }
 
@@ -51,7 +51,7 @@
         file_put_contents('./db/db.json', json_encode($listData));
 
 
-        header('Location: /DDAPI-v2/other/bank-v1/accounts.php');
+        header('Location: /DDAPI-cypress/other/bank-v1/accounts.php');
         die();
     }
 
