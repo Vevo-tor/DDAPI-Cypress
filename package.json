@@ -1,0 +1,19 @@
+{
+  "name": "ddapi-cypress",
+  "version": "1.0.0",
+  "description": "-----\r It's a sandbox website for testing. You can use/abuse it how ever you like. If you came here to help me out, then I'm giving you my early thanks :).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vevo-tor/DDAPI-Cypress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vevo-tor/DDAPI-Cypress/issues"
+  },
+  "homepage": "https://github.com/Vevo-tor/DDAPI-Cypress#readme"
+}

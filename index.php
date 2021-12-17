@@ -22,7 +22,7 @@ define('LOC', 'home')
     <p>Read the "DOCS" to find out how to use API end points.</p>
     <p>And visit "other" tab, to do Selenium tests.</p>
 
-    <p class="github">Do you want to help me out? You can help me develop this page here: <a href="https://github.com/AlphaMod1/DDAPI-v2/">https://github.com/AlphaMod1/DDAPI-v2/</a></p>
+
 
     <script src="./js/darkmode.js"></script>
     <script src='./js/main.js'></script>
