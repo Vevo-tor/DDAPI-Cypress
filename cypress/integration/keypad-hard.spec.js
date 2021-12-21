@@ -24,6 +24,8 @@ describe('Keypad Difficulty: hard', () => {
 
         //Submit form
         po.getSubmitButton().click();
+
+        //Assert success message
         cy.assertCorrect();
     });
 });

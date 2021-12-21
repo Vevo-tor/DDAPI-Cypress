@@ -3,7 +3,10 @@ const po = new DocumentListPO;
 describe('Keypad Difficulty: easy', () => {
     it('Should be easy', () => {
 
+        //baseUrl is behaving oddly
         cy.visit(Cypress.config('baseUrl'));
+
+        //Select Keypad Difficulty : Easy
         po.getKeypadEasy().click();
 
         // Read Todo and fill input
@@ -13,7 +16,10 @@ describe('Keypad Difficulty: easy', () => {
             });
         });
 
+        //Submit answer
         po.getSubmitButton().click();
+
+        //Assert correct message
         cy.assertCorrect();
     });
 });
