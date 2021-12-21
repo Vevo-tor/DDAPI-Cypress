@@ -1,25 +1,17 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+const DocumentListPO = require('../support/pageObject/keypad-document-list-pages');
+const po = new DocumentListPO;
+
+Cypress.Commands.add('findKeys', (arr) => {
+    for (let i = 1; i <= 12; i++) {
+        cy.get(`#keypad > :nth-child(${i})`).click();
+        cy.get('#input').invoke('val').then(e => {
+            arr.push(e);
+            po.getDelKey().click();
+        })
+    }
+
+})
+Cypress.Commands.add('assertCorrect', () => {
+    po.getSuccessMessage().should('exist')
+        .should('contain', 'Correct!');
+})
